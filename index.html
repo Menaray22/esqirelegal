@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  /*
+   * Netlify Identity invite/recovery/confirmation links point to the site
+   * ROOT (e.g. https://yoursite.netlify.app/#invite_token=...), but the
+   * Identity widget that can actually process that token only runs on
+   * /admin/. Left alone, the token just sits inert in the URL and this
+   * page renders as a normal homepage — which is the exact bug this
+   * forwards. Runs before anything else loads, so there's no flash of
+   * page content first. See README.md, "Netlify Identity token routing".
+   */
+  if (/(invite_token|recovery_token|confirmation_token|email_change_token)=/.test(location.hash)) {
+    location.replace("/admin/" + location.hash);
+  }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquires' Legal — Advocates, Notaries &amp; Consult | Lagos &amp; Abuja, Nigeria</title>
+<meta name="description" content="Esquires' Legal is an international law firm and set of Chambers based in Lagos and Abuja, Nigeria, with associate offices in London, New York and Douala. Solicitors, Notaries and Arbitrators.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.esquireslegal.com/">
+<meta property="og:title" content="Esquires' Legal — Advocates, Notaries &amp; Consult">
+<meta property="og:description" content="An international set of Chambers based in Nigeria, with associate offices across Africa, the UK and the United States.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="Esquires' Legal — home">
+      <img class="brand__mark" src="images/logo.svg" alt="Esquires' Legal" data-image-key="logo" data-placeholder-label="Esquires' legal">
+    </a>
+    <nav class="nav-primary" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="practice-areas.html">Practice Areas</a></li>
+        <li><a href="principal.html">Principal Counsel</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn-ghost-dark" href="contact.html">Get in Touch</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="ripple-field" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="container hero__grid">
+      <div class="reveal">
+        <span class="eyebrow hero__eyebrow">Advocates · Notaries · Consult</span>
+        <h1>Solicitors, Notaries<br>&amp; <em>Arbitrators</em></h1>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="practice-areas.html">Our Practice Areas</a>
+          <a class="btn btn-ghost-light" href="contact.html">Get in Touch</a>
+        </div>
+        <p class="hero__reg">Esquires' Legal &nbsp;·&nbsp; www.esquireslegal.com &nbsp;·&nbsp; BN 2003538</p>
+      </div>
+      <div class="hero__figure reveal">
+        <img src="images/hero-scales.jpg" alt="Bronze scales of justice held aloft against a sunset sky" data-image-key="hero-scales" data-placeholder-label="Hero — scales of justice at sunset" fetchpriority="high" decoding="async">
+        <div class="hero__quote">
+          <p>&ldquo;The legal practitioner lives for the direction of his people and the advancement of the cause of his country.&rdquo;</p>
+          <cite>— Christopher Alexander Sapara Williams</cite>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-cue" aria-hidden="true">
+      <span>Scroll</span>
+      <i></i>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="intro-heading">
+    <div class="container intro">
+      <div class="reveal">
+        <p class="intro__lede" id="intro-heading">Esquires&rsquo; <em>Legal</em> is a dynamic set of Chambers with highly experienced legal practitioners, Arbitrators and Notaries Public.</p>
+      </div>
+      <div class="intro__body reveal">
+        <p>Based primarily in Nigeria. It is an International Law firm with offices in the Cities of Lagos and Abuja (Nigeria), Associate Offices and major Cities in Douala, Cameroon, London (UK), New York and Houston [USA].</p>
+        <p>Furthermore, our membership of the African Bar Association (AFBA) has given us a wide network of international associates across the African Continent.</p>
+        <p class="motto">Our Motto — &ldquo;Integrity in Efficacy&rdquo;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION / VISION / PURPOSE ============ -->
+  <section class="section section--stone" aria-labelledby="mvp-heading">
+    <div class="container">
+      <h2 id="mvp-heading" class="visually-hidden">Mission, Vision and Purpose</h2>
+      <div class="purpose-feature reveal">
+        <span class="eyebrow">What Drives Us</span>
+        <blockquote>To deliver justifiably, unique and exemplary legal and advisory service.</blockquote>
+      </div>
+      <div class="mv-split">
+        <div class="mv-col reveal">
+          <h3>Our Mission</h3>
+          <p>To satisfy Clients with uncompromising professional legal services including other areas of enterprise and endeavour related to but outside the legal framework.</p>
+        </div>
+        <div class="mv-col reveal">
+          <h3>Our Vision</h3>
+          <p>To provide superior bespoke legal services and advisory solutions globally that meet unique challenges and exceed stated expectations in accordance with the highest professional standards and ethics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE AREA PREVIEW ============ -->
+  <section class="section section--dark" aria-labelledby="practice-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Practice Areas</span>
+        <h2 id="practice-heading">Sixteen areas of practice, one standard of counsel</h2>
+        <p>From ship arrest on the Lagos waterfront to legislative drafting at the National Assembly — the full range of our practice.</p>
+      </div>
+      <div class="practice-index-grid">
+        <div class="practice-index">
+          <a href="practice-areas.html#practice-1" class="reveal"><span class="num">01</span><span class="title">Corporate Law/Secretarial</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-2" class="reveal"><span class="num">02</span><span class="title">Real Property &amp; Conveyancing Law</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-3" class="reveal"><span class="num">03</span><span class="title">Notarial Services</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-4" class="reveal"><span class="num">04</span><span class="title">Maritime, Admiralty &amp; Shipping Law</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-5" class="reveal"><span class="num">05</span><span class="title">Legal And Legislative Drafting</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-6" class="reveal"><span class="num">06</span><span class="title">Arbitration/ADR, Mediation, Conciliation, Negotiations, Lobbyists</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-7" class="reveal"><span class="num">07</span><span class="title">Media, Entertainment &amp; Sports Law</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-8" class="reveal"><span class="num">08</span><span class="title">Immigration &amp; Nationality/Visa Matters</span><span class="arrow">View →</span></a>
+        </div>
+        <div class="practice-index">
+          <a href="practice-areas.html#practice-9" class="reveal"><span class="num">09</span><span class="title">General Litigation</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-10" class="reveal"><span class="num">10</span><span class="title">Intellectual Property</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-11" class="reveal"><span class="num">11</span><span class="title">Consumer Protection/Competition &amp; Anti-trust Law</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-12" class="reveal"><span class="num">12</span><span class="title">Energy/Power</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-13" class="reveal"><span class="num">13</span><span class="title">Family Law</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-14" class="reveal"><span class="num">14</span><span class="title">Customary Law &amp; Practice</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-15" class="reveal"><span class="num">15</span><span class="title">Proof Reading and Editing</span><span class="arrow">View →</span></a>
+          <a href="practice-areas.html#practice-16" class="reveal"><span class="num">16</span><span class="title">Other Areas</span><span class="arrow">View →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section" aria-labelledby="why-heading">
+    <div class="container why">
+      <div class="why__figure reveal" aria-hidden="true">
+        <img src="images/chambers-library.jpg" alt="" data-image-key="chambers-library" data-placeholder-label="Chambers — legal library" loading="lazy" decoding="async">
+      </div>
+      <div class="why__copy reveal">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 id="why-heading">Our Objectives</h2>
+        <p>We ensure that we remain focused on our professional target which is to satisfy our clients. Our goal is helping you reach your goal, offering insightful knowledge, creative thinking and maximum value to all our clients, all of the time.</p>
+        <p>At the end of conclusion of each brief, our clients are assured that they received exceptional professional legal service because we work to understand each client&rsquo;s particular needs and deliver services and specialty management solutions that will add value to their lives and businesses.</p>
+        <a class="btn btn-ghost-dark" href="about.html">More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSIGHTS (empty state) ============ -->
+  <section class="section section--stone" aria-labelledby="insights-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">From the Firm</span>
+        <h2 id="insights-heading">Insights &amp; Updates</h2>
+      </div>
+      <div class="insights-grid">
+        <div class="insight-card reveal">
+          <div class="ring" aria-hidden="true">i</div>
+          <h3>Commentary</h3>
+          <p>Notes on Nigerian and international legal developments — coming soon.</p>
+        </div>
+        <div class="insight-card reveal">
+          <div class="ring" aria-hidden="true">i</div>
+          <h3>Firm News</h3>
+          <p>Updates from our Lagos, Abuja and associate offices — coming soon.</p>
+        </div>
+        <div class="insight-card reveal">
+          <div class="ring" aria-hidden="true">i</div>
+          <h3>Publications</h3>
+          <p>Articles and long-form writing from our Principal Counsel — coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFICE LOCATIONS ============ -->
+  <section class="section section--navy" aria-labelledby="locations-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Where We Are</span>
+        <h2 id="locations-heading">Office Locations</h2>
+        <p>Offices in Lagos and Abuja, Nigeria, with associate offices and major cities in Douala, Cameroon, London (UK), New York and Houston (USA).</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-card reveal">
+          <h3>Abuja</h3>
+          <address>1st Floor, B Wing,<br>[Park N Shop Bus. Centre],<br>No. 24, Aminu Kano Crescent,<br>Wuse II, Abuja &ndash; Nigeria.</address>
+        </div>
+        <div class="location-card reveal">
+          <h3>London</h3>
+          <address>98, Coldharbour Lane,<br>Camberwell, London<br>SE5 9PU, UK</address>
+        </div>
+        <div class="location-card reveal">
+          <h3>New York</h3>
+          <address>18, East Broadway,<br>Suite 600A, New York 10013</address>
+        </div>
+      </div>
+      <div class="associate-list reveal">
+        <strong>Associate Chambers In</strong>
+        <p style="margin:0;">Lagos, Kano, Kaduna, Plateau, Enugu, Delta, Edo, Rivers, Cross-River, Akwa-Ibom, Kwara, Oyo &amp; Osun States.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" aria-labelledby="contact-heading">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 id="contact-heading">Contact Us</h2>
+        <div class="contact-detail">
+          <h3>Telephone</h3>
+          <p style="margin:0;">
+            <a data-cms-tel="phones.0" href="tel:+2348150470073">+234 (0) 81 5047 0073</a><br>
+            <a data-cms-tel="phones.1" href="tel:+2348150470074">+234 (0) 81 5047 0074</a><br>
+            <a data-cms-tel="phones.2" href="tel:+2348150470075">+234 (0) 81 5047 0075</a>
+          </p>
+        </div>
+        <div class="contact-detail">
+          <h3>Email</h3>
+          <p style="margin:0;">
+            <a data-cms-email="emails.0" href="mailto:admin@esquireslegal.com">admin@esquireslegal.com</a><br>
+            <a data-cms-email="emails.1" href="mailto:info@esquireslegal.com">info@esquireslegal.com</a>
+          </p>
+        </div>
+        <div class="contact-detail">
+          <h3>Follow</h3>
+          <div class="footer-social" aria-label="Social media">
+            <a data-cms-href="social.linkedin" href="#" aria-label="LinkedIn">in</a>
+            <a data-cms-href="social.twitter" href="#" aria-label="X (Twitter)">X</a>
+            <a data-cms-href="social.instagram" href="#" aria-label="Instagram">IG</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp-field" aria-hidden="true"><label>Don&rsquo;t fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-field">
+            <label for="practice-area">Area of interest</label>
+            <select id="practice-area" name="practice-area">
+              <option>General Enquiry</option>
+              <option>Corporate Law/Secretarial</option>
+              <option>Real Property &amp; Conveyancing Law</option>
+              <option>Notarial Services</option>
+              <option>Maritime, Admiralty &amp; Shipping Law</option>
+              <option>Legal And Legislative Drafting</option>
+              <option>Arbitration/ADR/Mediation</option>
+              <option>Media, Entertainment &amp; Sports Law</option>
+              <option>Immigration &amp; Visa Matters</option>
+              <option>General Litigation</option>
+              <option>Intellectual Property</option>
+              <option>Consumer Protection/Competition Law</option>
+              <option>Energy/Power</option>
+              <option>Family Law</option>
+              <option>Customary Law &amp; Practice</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Esquires' Legal — home">
+          <img class="brand__mark" src="images/logo.svg" alt="Esquires' Legal" data-image-key="logo" data-placeholder-label="Esquires' legal" loading="lazy" decoding="async">
+        </a>
+        <p>Advocates, Notaries &amp; Consult. Solicitors, Notaries &amp; Arbitrators. &ldquo;Integrity in Efficacy.&rdquo;</p>
+        <div class="footer-social" aria-label="Social media">
+          <a data-cms-href="social.linkedin" href="#" aria-label="LinkedIn">in</a>
+          <a data-cms-href="social.twitter" href="#" aria-label="X (Twitter)">X</a>
+          <a data-cms-href="social.instagram" href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="principal.html">Principal Counsel</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Practice Areas</h4>
+        <ul>
+          <li><a href="practice-areas.html#practice-1">Corporate Law/Secretarial</a></li>
+          <li><a href="practice-areas.html#practice-4">Maritime, Admiralty &amp; Shipping Law</a></li>
+          <li><a href="practice-areas.html#practice-7">Media, Entertainment &amp; Sports Law</a></li>
+          <li><a href="practice-areas.html#practice-13">Family Law</a></li>
+          <li><a href="practice-areas.html#practice-8">Immigration &amp; Visa Matters</a></li>
+          <li><a href="practice-areas.html">View All Areas &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Offices</h4>
+        <address class="footer-office">
+          <span class="footer-office__city">Abuja</span>
+          1st Floor, B Wing, No. 24, Aminu Kano Crescent, Wuse II, Abuja &ndash; Nigeria.
+        </address>
+        <address class="footer-office">
+          <span class="footer-office__city">London</span>
+          98, Coldharbour Lane, Camberwell, London SE5 9PU, UK
+        </address>
+        <address class="footer-office">
+          <span class="footer-office__city">New York</span>
+          18, East Broadway, Suite 600A, New York 10013
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a data-cms-email="emails.0" href="mailto:admin@esquireslegal.com">admin@esquireslegal.com</a></li>
+          <li><a data-cms-email="emails.1" href="mailto:info@esquireslegal.com">info@esquireslegal.com</a></li>
+          <li><a data-cms-tel="phones.0" href="tel:+2348150470073">+234 (0) 81 5047 0073</a></li>
+          <li><a data-cms-tel="phones.1" href="tel:+2348150470074">+234 (0) 81 5047 0074</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="footer-year">2026</span> Esquires&rsquo; Legal. BN 2003538. All rights reserved.</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
