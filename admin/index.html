@@ -7,9 +7,61 @@
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
   <!-- Keeping this out of search results -->
   <meta name="robots" content="noindex" />
+  <!--
+    Required for the git-gateway backend's entire auth flow — login,
+    invite, and password recovery all run through this widget.
+  -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <!-- Decap CMS, loaded from the CDN — no build step required -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Diagnostic logging — intentionally verbose. If the auth flow still
+    // misbehaves, open the browser console (desktop is easiest: right
+    // click -> Inspect -> Console) and read these lines top to bottom;
+    // they show exactly where the flow stops matching expectations.
+    console.log("[cms-auth] page loaded. location.hash =", window.location.hash || "(empty)");
+
+    if (!window.netlifyIdentity) {
+      console.error("[cms-auth] window.netlifyIdentity is undefined — the widget script from identity.netlify.com did not load (blocked, offline, or CDN unreachable).");
+    } else {
+      var identity = window.netlifyIdentity;
+      console.log("[cms-auth] widget script loaded OK.");
+
+      identity.on("error", function (err) {
+        console.error("[cms-auth] Identity error event:", err);
+      });
+
+      identity.on("open", function () {
+        console.log("[cms-auth] modal opened.");
+      });
+
+      identity.on("close", function () {
+        console.log("[cms-auth] modal closed.");
+      });
+
+      identity.on("init", function (user) {
+        console.log("[cms-auth] init event fired. currentUser =", user);
+
+        var hasAuthToken = /(invite_token|recovery_token|confirmation_token|email_change_token)=/.test(
+          window.location.hash
+        );
+        console.log("[cms-auth] hash contains an auth token?", hasAuthToken);
+
+        if (hasAuthToken) {
+          console.log("[cms-auth] calling identity.open() now.");
+          identity.open();
+        }
+
+        if (!user) {
+          identity.on("login", function (loggedInUser) {
+            console.log("[cms-auth] login event fired for:", loggedInUser && loggedInUser.email);
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
