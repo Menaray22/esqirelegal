@@ -1,0 +1,14 @@
+{
+  "phones": ["+234 (0) 81 5047 0073", "+234 (0) 81 5047 0074", "+234 (0) 81 5047 0075"],
+  "emails": ["admin@esquireslegal.com", "info@esquireslegal.com"],
+  "hours": {
+    "weekday": "Monday \u2013 Friday: 9:00 AM \u2013 5:00 PM",
+    "saturday": "Saturday: By appointment",
+    "sunday": "Sunday: Closed"
+  },
+  "social": {
+    "linkedin": "#",
+    "twitter": "#",
+    "instagram": "#"
+  }
+}
